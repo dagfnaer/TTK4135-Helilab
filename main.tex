@@ -1,0 +1,50 @@
+\input{preamble} % The preamble specifies all included packages and related parameters.
+% \input simply inserts the contents of the file, while \include forces a \newpage.
+% See \input vs. \include: http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+
+\begin{document}
+
+% Titlepage
+\title{TTK4135 Optimization and Control\linebreak Helicopter Lab}
+\author{Group 66\\Student 999239\\Student 999526\\Student 481882}
+\date{April 28, 2017}
+\begin{titlepage}
+    \maketitle
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/itk_ntnu}\\
+    Department of Engineering Cybernetics
+    \end{figure}
+    \thispagestyle{empty}
+\end{titlepage}
+
+% Abstract
+\newpage
+\pagenumbering{roman}
+\include{abstract}
+%\thispagestyle{empty} % Avoid page numbering on the abstract page.
+
+% TOC
+\newpage
+\tableofcontents
+%\thispagestyle{empty} % Avoid page numbering on the table of contents.
+
+% Main content
+\newpage
+\pagenumbering{arabic}
+\include{introduction}
+\include{ProblemDescription}
+\include{10.2}
+\include{10.3}
+\include{10.4}
+\include{EndResultsAndDiscussion}
+\include{conclusion}
+\include{appendix}
+
+% References
+\newpage
+\addcontentsline{toc}{section}{References}
+\printbibliography{}
+\label{sec:bibliography}
+
+\end{document}
